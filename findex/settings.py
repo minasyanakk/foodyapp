@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 INSTALLED_APPS = [
-    'django.contrib.sites',
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'index',
     'import_export',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

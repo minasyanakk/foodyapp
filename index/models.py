@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from tinymce.models import HTMLField
 
  
 class Foods(models.Model):
@@ -19,9 +19,11 @@ class Foods(models.Model):
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    content = models.TextField()
+    content = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
     ingredients = models.TextField()
+    description = models.TextField(default="cooking")
+
 
     class Meta:
         ordering = ['-created_on']

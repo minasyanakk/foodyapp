@@ -4,7 +4,34 @@
   <meta charset="UTF-8">
   <title>fooddy.app</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
+<style type="text/css">
 
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 80%;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+ol li::before {
+  color: #667eea;
+  content: "" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 4rem;
+  margin-right: 1.0rem;
+  line-height: 1;
+}
+
+
+}</style>
 </head>
 <body>
 
@@ -41,4 +68,5 @@
 <!-- partial -->
  
 </body>
+ 
 </html>
